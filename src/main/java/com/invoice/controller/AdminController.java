@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,8 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.invoice.model.User;
 import com.invoice.service.UserService;
 
+@CrossOrigin(origins="https://invoice-xi-bice.vercel.app")
 @RestController
 @RequestMapping("/api/admin")
+
 public class AdminController {
 
     @Autowired
